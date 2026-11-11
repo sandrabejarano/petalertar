@@ -1,0 +1,282 @@
+{
+  "components": {
+    "com.iwsdk.components.IBLGradient": {
+      "equator": [
+        0.8,
+        0.76,
+        0.7,
+        1
+      ],
+      "ground": [
+        0.46,
+        0.42,
+        0.38,
+        1
+      ],
+      "intensity": 0.6,
+      "sky": [
+        0.96,
+        0.94,
+        0.9,
+        1
+      ]
+    }
+  },
+  "environment": {
+    "exposure": 1,
+    "shadows": false,
+    "toneMapping": "aces"
+  },
+  "nodes": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "components": {
+                "ContactShadow": {
+                  "color": [
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "height": 0.0016,
+                  "opacity": 0.4,
+                  "size": [
+                    1.1,
+                    1.3
+                  ]
+                }
+              },
+              "id": "dog-contact",
+              "name": "Sombra del perro",
+              "transform": {
+                "position": [
+                  0,
+                  0.002,
+                  0
+                ]
+              }
+            }
+          ],
+          "components": {
+            "AudioSource": {
+              "maxInstances": 2,
+              "playbackMode": "fade-restart",
+              "src": "./audio/ladrando.mp3"
+            },
+            "Pet": {
+              "kind": "dog"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          },
+          "content": {
+            "asset": "dog",
+            "type": "asset"
+          },
+          "id": "dog",
+          "name": "Perro",
+          "transform": {
+            "position": [
+              -0.5,
+              0,
+              0
+            ],
+            "rotationDeg": [
+              0,
+              15,
+              0
+            ]
+          }
+        },
+        {
+          "children": [
+            {
+              "components": {
+                "ContactShadow": {
+                  "color": [
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "height": 0.0016,
+                  "opacity": 0.4,
+                  "size": [
+                    0.8,
+                    0.9
+                  ]
+                }
+              },
+              "id": "cat-contact",
+              "name": "Sombra del gato",
+              "transform": {
+                "position": [
+                  0,
+                  0.002,
+                  0
+                ]
+              }
+            }
+          ],
+          "components": {
+            "AudioSource": {
+              "maxInstances": 2,
+              "playbackMode": "fade-restart",
+              "src": "./audio/maullido.mp3"
+            },
+            "Pet": {
+              "kind": "cat"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          },
+          "content": {
+            "asset": "cat",
+            "type": "asset"
+          },
+          "id": "cat",
+          "name": "Gato",
+          "transform": {
+            "position": [
+              0.45,
+              0,
+              0
+            ],
+            "rotationDeg": [
+              0,
+              -15,
+              0
+            ]
+          }
+        }
+      ],
+      "components": {
+        "PetsRoot": {}
+      },
+      "framingRole": "support",
+      "id": "pets-root",
+      "name": "Mascotas",
+      "transform": {
+        "position": [
+          0,
+          0,
+          -1.6
+        ]
+      }
+    },
+    {
+      "components": {
+        "RayInteractable": {}
+      },
+      "content": {
+        "asset": "start-panel",
+        "type": "asset"
+      },
+      "id": "start-panel",
+      "name": "Pantalla de inicio",
+      "transform": {
+        "position": [
+          0,
+          1.3,
+          -1.0
+        ],
+        "scale": 0.25
+      }
+    },
+    {
+      "content": {
+        "asset": "hint-panel",
+        "type": "asset"
+      },
+      "id": "hint-panel",
+      "name": "Indicaciones",
+      "transform": {
+        "position": [
+          0,
+          1.3,
+          -1.2
+        ],
+        "scale": 0.22
+      }
+    },
+    {
+      "components": {
+        "RayInteractable": {}
+      },
+      "content": {
+        "asset": "pet-panel",
+        "type": "asset"
+      },
+      "id": "pet-panel",
+      "name": "Panel de mascotas",
+      "transform": {
+        "position": [
+          0,
+          1.35,
+          -1.3
+        ],
+        "rotationDeg": [
+          -6,
+          0,
+          0
+        ],
+        "scale": 0.22
+      }
+    },
+    {
+      "components": {
+        "DirectionalLight": {
+          "castShadow": false,
+          "color": [
+            1,
+            0.945,
+            0.87,
+            1
+          ],
+          "intensity": 2
+        }
+      },
+      "id": "key-light",
+      "name": "Key Light",
+      "transform": {
+        "position": [
+          -2.3541,
+          11.2763,
+          1.762
+        ],
+        "rotationDeg": [
+          -73.3982,
+          -11.3134,
+          0
+        ]
+      }
+    },
+    {
+      "components": {
+        "HemisphereLight": {
+          "groundColor": [
+            0.55,
+            0.52,
+            0.48,
+            1
+          ],
+          "intensity": 1,
+          "skyColor": [
+            0.96,
+            0.94,
+            0.9,
+            1
+          ]
+        }
+      },
+      "id": "fill-light",
+      "name": "Fill Light"
+    }
+  ],
+  "resources": {},
+  "units": "meters",
+  "version": "iwsdk.scene.v1"
+}

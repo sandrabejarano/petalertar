@@ -1,0 +1,104 @@
+<!--
+  Indicaciones de la fase 2 (un solo mensaje visible a la vez; src/hints.js alterna cual):
+    msg-search  buscando el suelo       msg-found  suelo detectado
+    msg-hello   invitacion a agacharse   msg-pet    acariciando
+  Fuentes Barlow / Varela Round con tildes (ver src/fonts.js). Iconos Lucide: ScanSearch, Check, ChevronsDown, Heart.
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_400Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: VarelaRound;
+    src: url(../fonts/VarelaRound_400Regular.ttf);
+  }
+
+  .panel-root {
+    flex-direction: column;
+    width: 430px;
+    font-family: Barlow;
+  }
+
+  .msg {
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .badge {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    background-color: #4a8bdd;
+  }
+
+  .text {
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    gap: 4px;
+  }
+
+  .title {
+    font-family: VarelaRound;
+    color: #1c1d20;
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .title:dark {
+    color: #fafaf7;
+  }
+
+  .sub {
+    color: #3a3b40;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .sub:dark {
+    color: #dddfe3;
+  }
+</style>
+<Panel class="panel-root">
+  <div id="msg-search" class="msg">
+    <div class="badge"><ScanSearch width="36" height="36" color="#ffffff"></ScanSearch></div>
+    <div class="text">
+      <span class="title">Buscando el suelo</span>
+      <span class="sub">Mueve el dispositivo despacio y mira hacia el piso.</span>
+    </div>
+  </div>
+  <div id="msg-found" class="msg" style="display: none">
+    <div class="badge"><Check width="36" height="36" color="#ffffff"></Check></div>
+    <div class="text">
+      <span class="title">¡Suelo detectado!</span>
+      <span class="sub">Mantén la vista fija un momento.</span>
+    </div>
+  </div>
+  <div id="msg-hello" class="msg" style="display: none">
+    <div class="badge"><ChevronsDown width="36" height="36" color="#ffffff"></ChevronsDown></div>
+    <div class="text">
+      <span class="title">¡Hola!</span>
+      <span class="sub">Acércate y agáchate para acariciarnos.</span>
+    </div>
+  </div>
+  <div id="msg-pet" class="msg" style="display: none">
+    <div class="badge"><Heart width="36" height="36" color="#ffffff"></Heart></div>
+    <div class="text">
+      <span class="title">¡Qué rico!</span>
+      <span class="sub">Sigue acariciándonos.</span>
+    </div>
+  </div>
+</Panel>

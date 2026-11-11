@@ -1,0 +1,138 @@
+<!--
+  FASE 1 - Pantalla de inicio: logo oficial, cuadro de texto introductorio y boton SIGUIENTE.
+  Panel, Button, ButtonIcon y ButtonLabel vienen del kit Horizon; ArrowRight es un icono Lucide incluido.
+  El logo es ar/public/ui/logo.png (version PNG de static/logo.svg).
+  Las fuentes incluidas en IWSDK solo tienen ASCII (sin tildes ni enie), asi que se usan Barlow y Varela Round
+  (las de la experiencia original, licencia OFL en ar/public/fonts) con @font-face.
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_400Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: VarelaRound;
+    src: url(../fonts/VarelaRound_400Regular.ttf);
+  }
+
+  .panel-root {
+    flex-direction: column;
+    width: 460px;
+    font-family: Barlow;
+  }
+
+  .logo-box {
+    align-items: center;
+    justify-content: center;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-top: 22px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border-radius: 24px;
+    background-color: #4a8bdd;
+  }
+
+  .logo {
+    width: 270px;
+    height: 183px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 22px;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-bottom: 6px;
+  }
+
+  .eyebrow {
+    color: #6b5a00;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+  }
+
+  .eyebrow:dark {
+    color: #f5d90a;
+  }
+
+  .heading {
+    color: #1c1d20;
+    font-family: VarelaRound;
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .heading:dark {
+    color: #fafaf7;
+  }
+
+  .intro-box {
+    flex-direction: column;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-top: 10px;
+    margin-bottom: 18px;
+    padding: 16px;
+    border-radius: 18px;
+    border-width: 1px;
+    border-color: #4a8bdd;
+    background-color: #1b2740;
+  }
+
+  .body {
+    color: #eef3ff;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .warning {
+    color: #ffc24d;
+    font-size: 18px;
+    line-height: 25px;
+    margin-left: 26px;
+    margin-right: 26px;
+    margin-bottom: 14px;
+  }
+
+  .button {
+    justify-content: center;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 24px;
+  }
+
+  .button-label {
+    transform-translate-y: 1px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+  }
+</style>
+<Panel class="panel-root">
+  <div class="logo-box">
+    <img class="logo" src="./ui/logo.png" />
+  </div>
+  <div class="content">
+    <div class="eyebrow">KIT DE EMERGENCIA</div>
+    <div class="heading">Cuida a tus mascotas</div>
+  </div>
+  <div class="intro-box">
+    <span class="body">En esta experiencia de realidad aumentada, un perro y un gato aparecen en el suelo de tu espacio. Acércate y agáchate para acariciarlos, y aprende a cuidarlos en una emergencia.</span>
+  </div>
+  <span id="start-unsupported" class="warning" style="display: none">Este dispositivo no es compatible con realidad aumentada. Abre este enlace en un Meta Quest o en un celular Android con ARCore.</span>
+  <Button id="start-button" class="button">
+    <ButtonLabel class="button-label" style="font-family: Barlow">SIGUIENTE</ButtonLabel>
+    <ButtonIcon>
+      <ArrowRight></ArrowRight>
+    </ButtonIcon>
+  </Button>
+</Panel>
