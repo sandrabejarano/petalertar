@@ -227,6 +227,21 @@
       }
     },
     {
+      "content": {
+        "asset": "casa-escenario",
+        "type": "asset"
+      },
+      "id": "casa-escenario",
+      "name": "Escenario de las 4 estaciones",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
       "components": {
         "DirectionalLight": {
           "castShadow": false,
