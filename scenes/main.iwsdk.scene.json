@@ -66,6 +66,7 @@
               "playbackMode": "fade-restart",
               "src": "./audio/ladrando.mp3"
             },
+            "DepthOccludable": {},
             "Pet": {
               "kind": "dog"
             },
@@ -127,6 +128,7 @@
               "playbackMode": "fade-restart",
               "src": "./audio/maullido.mp3"
             },
+            "DepthOccludable": {},
             "Pet": {
               "kind": "cat"
             },
@@ -227,6 +229,9 @@
       }
     },
     {
+      "components": {
+        "DepthOccludable": {}
+      },
       "content": {
         "asset": "casa-escenario",
         "type": "asset"
