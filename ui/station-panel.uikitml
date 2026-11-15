@@ -1,0 +1,105 @@
+<!--
+  Panel de instrucciones de la estacion actual (src/estaciones/colocar-estaciones.js lo llena y lo ubica arriba de la estacion).
+    st-step   "ESTACION 1 DE 4"     st-title  nombre de la estacion     st-text  instruccion breve
+    btn-move  volver a colocar la estacion     btn-next  pasar a la siguiente estacion
+  Botones grandes para tocarlos con el indice (el nodo de la escena lleva PokeInteractable y RayInteractable).
+  Iconos Lucide: Move, ArrowRight.
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_400Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: VarelaRound;
+    src: url(../fonts/VarelaRound_400Regular.ttf);
+  }
+
+  .panel-root {
+    flex-direction: column;
+    width: 420px;
+    font-family: Barlow;
+  }
+
+  .panel-content {
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 20px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 12px;
+  }
+
+  .eyebrow {
+    color: #6b5a00;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+  }
+
+  .eyebrow:dark {
+    color: #f5d90a;
+  }
+
+  .heading {
+    font-family: VarelaRound;
+    color: #1c1d20;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .heading:dark {
+    color: #fafaf7;
+  }
+
+  .body {
+    color: #3a3b40;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .body:dark {
+    color: #dddfe3;
+  }
+
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 20px;
+  }
+
+  .button-label {
+    transform-translate-y: 1px;
+  }
+</style>
+<Panel class="panel-root">
+  <div class="panel-content">
+    <div id="st-step" class="eyebrow">ESTACIÓN 1 DE 4</div>
+    <span id="st-title" class="heading">Kit de emergencia</span>
+    <span id="st-text" class="body">Arma el kit de tu mascota.</span>
+  </div>
+  <div class="row">
+    <Button id="btn-move">
+      <ButtonIcon>
+        <Move></Move>
+      </ButtonIcon>
+      <ButtonLabel class="button-label">Mover</ButtonLabel>
+    </Button>
+    <Button id="btn-next">
+      <ButtonIcon>
+        <ArrowRight></ArrowRight>
+      </ButtonIcon>
+      <ButtonLabel id="btn-next-label" class="button-label">Siguiente</ButtonLabel>
+    </Button>
+  </div>
+</Panel>

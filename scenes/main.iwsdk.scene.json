@@ -230,6 +230,26 @@
     },
     {
       "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "content": {
+        "asset": "station-panel",
+        "type": "asset"
+      },
+      "id": "station-panel",
+      "name": "Panel de la estacion",
+      "transform": {
+        "position": [
+          0,
+          -10,
+          0
+        ],
+        "scale": 0.16
+      }
+    },
+    {
+      "components": {
         "DepthOccludable": {}
       },
       "content": {
