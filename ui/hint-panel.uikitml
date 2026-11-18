@@ -91,7 +91,7 @@
     <div class="badge badge-warn"><ScanLine width="36" height="36" color="#ffffff"></ScanLine></div>
     <div class="text">
       <span class="title">Escanea tu espacio</span>
-      <span class="sub">El visor aún no conoce esta sala. Sal de la app y ve a Configuración &gt; Espacio físico &gt; Configuración del espacio. Luego vuelve a entrar.</span>
+      <span class="sub">Antes de empezar, el visor debe conocer esta sala. Sigue el escaneo que se abre y recorre la sala con la vista. Si no se abre: Configuración &gt; Espacio físico &gt; Configuración del espacio.</span>
     </div>
   </div>
   <div id="msg-blocked" class="msg" style="display: none">
@@ -112,7 +112,7 @@
     <div class="badge"><MapPin width="36" height="36" color="#ffffff"></MapPin></div>
     <div class="text">
       <span id="station-title" class="title">Coloca la estación 1</span>
-      <span class="sub">Mira hacia un espacio libre del piso.</span>
+      <span id="station-diag" class="sub">Mira hacia un espacio libre del piso.</span>
     </div>
   </div>
   <div id="msg-station-ok" class="msg" style="display: none">
