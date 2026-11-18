@@ -1,9 +1,8 @@
 <!--
-  FASE 1 - Pantalla de inicio: logo oficial, cuadro de texto introductorio y boton SIGUIENTE.
-  Panel, Button, ButtonIcon y ButtonLabel vienen del kit Horizon; ArrowRight es un icono Lucide incluido.
-  El logo es ar/public/ui/logo.png (version PNG de static/logo.svg).
-  Las fuentes incluidas en IWSDK solo tienen ASCII (sin tildes ni enie), asi que se usan Barlow y Varela Round
-  (las de la experiencia original, licencia OFL en ar/public/fonts) con @font-face.
+  Pantalla previa, FUERA de AR (el navegador exige un toque para entrar en realidad aumentada): solo el logo y ENTRAR.
+  Todo lo demas (logo animado y bienvenida) ocurre ya dentro de AR, sobre el espacio real: src/estaciones/intro-screen.js.
+  Estilo de las tarjetas del proyecto anterior. El logo es public/ui/logo.png. Iconos Lucide: ArrowRight.
+    start-button  entra en AR      start-unsupported  aviso si el dispositivo no tiene AR
 -->
 <style>
   @font-face {
@@ -22,117 +21,83 @@
     src: url(../fonts/VarelaRound_400Regular.ttf);
   }
 
-  .panel-root {
+  .card {
     flex-direction: column;
-    width: 460px;
+    align-items: center;
+    width: 420px;
+    padding-top: 26px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 28px;
+    gap: 14px;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: #ffffff;
+    background-color: #dcebfb;
     font-family: Barlow;
   }
 
   .logo-box {
     align-items: center;
     justify-content: center;
-    margin-left: 22px;
-    margin-right: 22px;
-    margin-top: 22px;
-    padding-top: 22px;
-    padding-bottom: 22px;
-    border-radius: 24px;
+    width: 360px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 22px;
     background-color: #4a8bdd;
   }
 
   .logo {
-    width: 270px;
-    height: 183px;
+    width: 240px;
+    height: 163px;
   }
 
-  .content {
-    flex-direction: column;
-    gap: 8px;
-    padding-top: 22px;
-    padding-left: 26px;
-    padding-right: 26px;
-    padding-bottom: 6px;
-  }
-
-  .eyebrow {
-    color: #6b5a00;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1.4px;
-  }
-
-  .eyebrow:dark {
-    color: #f5d90a;
-  }
-
-  .heading {
-    color: #1c1d20;
+  .title {
     font-family: VarelaRound;
-    font-size: 34px;
-    line-height: 40px;
-  }
-
-  .heading:dark {
-    color: #fafaf7;
-  }
-
-  .intro-box {
-    flex-direction: column;
-    margin-left: 22px;
-    margin-right: 22px;
-    margin-top: 10px;
-    margin-bottom: 18px;
-    padding: 16px;
-    border-radius: 18px;
-    border-width: 1px;
-    border-color: #4a8bdd;
-    background-color: #1b2740;
-  }
-
-  .body {
-    color: #eef3ff;
-    font-size: 20px;
-    line-height: 28px;
+    color: #14305e;
+    font-size: 28px;
+    line-height: 34px;
   }
 
   .warning {
-    color: #ffc24d;
-    font-size: 18px;
-    line-height: 25px;
-    margin-left: 26px;
-    margin-right: 26px;
-    margin-bottom: 14px;
+    color: #c2412f;
+    font-size: 17px;
+    line-height: 23px;
+    text-align: center;
   }
 
-  .button {
+  .btn {
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    margin-left: 22px;
-    margin-right: 22px;
-    margin-bottom: 24px;
+    gap: 10px;
+    width: 360px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 32px;
+    background-color: #14305e;
+    cursor: pointer;
   }
 
-  .button-label {
-    transform-translate-y: 1px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
+  .btn:hover {
+    background-color: #24508f;
+  }
+
+  .btn-label {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
   }
 </style>
-<Panel class="panel-root">
+<div class="card">
   <div class="logo-box">
     <img class="logo" src="./ui/logo.png" />
   </div>
-  <div class="content">
-    <div class="eyebrow">KIT DE EMERGENCIA</div>
-    <div class="heading">Cuida a tus mascotas</div>
+  <span class="title">Cuida a tus mascotas</span>
+  <span id="start-unsupported" class="warning" style="display: none">Este dispositivo no es compatible con realidad aumentada. Abre este enlace en un Meta Quest.</span>
+  <div id="start-button" class="btn">
+    <span class="btn-label">ENTRAR</span>
+    <ArrowRight width="22" height="22" color="#ffffff"></ArrowRight>
   </div>
-  <div class="intro-box">
-    <span class="body">En esta experiencia de realidad aumentada, un perro y un gato aparecen en el suelo de tu espacio. Acércate y agáchate para acariciarlos, y aprende a cuidarlos en una emergencia.</span>
-  </div>
-  <span id="start-unsupported" class="warning" style="display: none">Este dispositivo no es compatible con realidad aumentada. Abre este enlace en un Meta Quest o en un celular Android con ARCore.</span>
-  <Button id="start-button" class="button">
-    <ButtonLabel class="button-label" style="font-family: Barlow">SIGUIENTE</ButtonLabel>
-    <ButtonIcon>
-      <ArrowRight></ArrowRight>
-    </ButtonIcon>
-  </Button>
-</Panel>
+</div>

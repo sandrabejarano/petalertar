@@ -28,24 +28,35 @@
   .panel-root {
     flex-direction: column;
     width: 430px;
+    border-radius: 24px;
+    border-width: 3px;
+    border-color: #ffffff;
+    background-color: #dcebfb;
     font-family: Barlow;
   }
 
   .msg {
     flex-direction: row;
     align-items: center;
-    gap: 18px;
-    padding: 20px;
+    gap: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .badge {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    border-radius: 32px;
+    border-radius: 16px;
     background-color: #4a8bdd;
+  }
+
+  .badge-warn {
+    background-color: #ff7a66;
   }
 
   .text {
@@ -57,30 +68,18 @@
 
   .title {
     font-family: VarelaRound;
-    color: #1c1d20;
-    font-size: 28px;
-    line-height: 34px;
-  }
-
-  .title:dark {
-    color: #fafaf7;
+    color: #14305e;
+    font-size: 26px;
+    line-height: 32px;
   }
 
   .sub {
-    color: #3a3b40;
-    font-size: 20px;
-    line-height: 26px;
-  }
-
-  .sub:dark {
-    color: #dddfe3;
-  }
-
-  .badge-warn {
-    background-color: #e0703a;
+    color: #3b5683;
+    font-size: 19px;
+    line-height: 25px;
   }
 </style>
-<Panel class="panel-root">
+<div class="panel-root">
   <div id="msg-search" class="msg">
     <div class="badge"><ScanSearch width="36" height="36" color="#ffffff"></ScanSearch></div>
     <div class="text">
@@ -113,21 +112,28 @@
     <div class="badge"><MapPin width="36" height="36" color="#ffffff"></MapPin></div>
     <div class="text">
       <span id="station-title" class="title">Coloca la estación 1</span>
-      <span class="sub">Mira un espacio libre del piso, con lugar delante para usarla.</span>
+      <span class="sub">Mira hacia un espacio libre del piso.</span>
     </div>
   </div>
   <div id="msg-station-ok" class="msg" style="display: none">
     <div class="badge"><Check width="36" height="36" color="#ffffff"></Check></div>
     <div class="text">
       <span class="title">¡Aquí cabe!</span>
-      <span class="sub">Pellizca o aprieta el gatillo para dejarla aquí.</span>
+      <span class="sub">Mantén la vista quieta un momento y aparecerá aquí.</span>
+    </div>
+  </div>
+  <div id="msg-interpret" class="msg" style="display: none">
+    <div class="badge"><ScanSearch width="36" height="36" color="#ffffff"></ScanSearch></div>
+    <div class="text">
+      <span class="title">Interpretando tu espacio</span>
+      <span class="sub">Buscamos un lugar libre del piso para Cacao y Nube.</span>
     </div>
   </div>
   <div id="msg-hello" class="msg" style="display: none">
     <div class="badge"><ChevronsDown width="36" height="36" color="#ffffff"></ChevronsDown></div>
     <div class="text">
       <span class="title">¡Hola!</span>
-      <span class="sub">Acércate y agáchate para acariciarnos.</span>
+      <span class="sub">Pon tu mano sobre nuestra cabeza para acariciarnos.</span>
     </div>
   </div>
   <div id="msg-pet" class="msg" style="display: none">
@@ -137,4 +143,4 @@
       <span class="sub">Sigue acariciándonos.</span>
     </div>
   </div>
-</Panel>
+</div>
