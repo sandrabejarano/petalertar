@@ -139,15 +139,17 @@
   <span id="et-title" class="title">¿Y si se pierde?</span>
   <span id="et-text" class="text">Esto ayuda a encontrarla si escapa:</span>
   <div id="et-list" class="list">
-    <div class="item"><div class="dot"></div><span id="et-b1" class="item-text">Placa: nombre y teléfonos.</span></div>
-    <div class="item"><div class="dot"></div><span id="et-b2" class="item-text">Rastreador: su ubicación en tu celular.</span></div>
-    <div class="item"><div class="dot"></div><span id="et-b3" class="item-text">Microchip: te identifica como dueño.</span></div>
+    <div class="item"><div class="dot"></div><span id="et-b1" class="item-text">Microchip: te identifica como dueño.</span></div>
+    <div class="item"><div class="dot"></div><span id="et-b2" class="item-text">Lo coloca un veterinario en su nuca.</span></div>
+    <div class="item"><div class="dot"></div><span id="et-b3" class="item-text">Mantén tus datos al día.</span></div>
   </div>
   <div id="et-next" class="btn">
+    <Pointer width="24" height="24" color="#ffffff"></Pointer>
     <span id="et-next-label" class="btn-label">CONTINUAR</span>
     <ArrowRight width="22" height="22" color="#ffffff"></ArrowRight>
   </div>
   <div id="et-repeat" class="btn btn-o" style="display: none">
+    <Pointer width="24" height="24" color="#ffffff"></Pointer>
     <RotateCcw width="22" height="22" color="#ffffff"></RotateCcw>
     <span class="btn-label">REPETIR EXPERIENCIA</span>
   </div>

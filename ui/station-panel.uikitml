@@ -124,12 +124,12 @@
   <span id="st-text" class="text">Toca un objeto para ver para qué sirve.</span>
   <div id="tuto-mano" style="display: none; flex-direction: row; align-items: center; justify-content: center; gap: 14px; padding-top: 6px; padding-bottom: 6px">
     <div id="tuto-abierta" style="display: flex; flex-direction: column; align-items: center; gap: 4px">
-      <Hand width="46" height="46" color="#14305e"></Hand>
+      <img id="tuto-img1" src="../img/mano-abierta.png" style="width: 66px; height: 84px"></img>
       <span id="tuto-t1" class="text">Abre la mano</span>
     </div>
     <ArrowRight width="26" height="26" color="#ff7a66"></ArrowRight>
     <div id="tuto-cerrada" style="display: flex; flex-direction: column; align-items: center; gap: 4px">
-      <Grab width="46" height="46" color="#ff7a66"></Grab>
+      <img id="tuto-img2" src="../img/mano-puno.png" style="width: 64px; height: 84px"></img>
       <span id="tuto-t2" class="text">Ciérrala para agarrar</span>
     </div>
   </div>
@@ -145,9 +145,11 @@
       <Move width="22" height="22" color="#14305e"></Move>
     </div>
     <div id="btn-skip" class="btn ghost" style="display: none">
+      <Pointer width="22" height="22" color="#14305e"></Pointer>
       <span class="ghost-label">Saltar</span>
     </div>
     <div id="btn-next" class="btn">
+      <Pointer width="24" height="24" color="#ffffff"></Pointer>
       <span id="btn-next-label" class="label">Siguiente</span>
       <ArrowRight width="20" height="20" color="#ffffff"></ArrowRight>
     </div>

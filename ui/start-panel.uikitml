@@ -97,6 +97,7 @@
   <span class="title">Cuida a tus mascotas</span>
   <span id="start-unsupported" class="warning" style="display: none">Este dispositivo no es compatible con realidad aumentada. Abre este enlace en un Meta Quest.</span>
   <div id="start-button" class="btn">
+    <Pointer width="24" height="24" color="#ffffff"></Pointer>
     <span class="btn-label">ENTRAR</span>
     <ArrowRight width="22" height="22" color="#ffffff"></ArrowRight>
   </div>
