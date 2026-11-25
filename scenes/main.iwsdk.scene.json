@@ -68,7 +68,7 @@
               "src": "./audio/ladrando.mp3",
               "volume": 0.5
             },
-            "DepthOccludable": {},
+            "DepthOccludable": { "mode": "MinMaxSoftOcclusion" },
             "Pet": {
               "kind": "dog"
             },
@@ -131,7 +131,7 @@
               "src": "./audio/maullido.mp3",
               "volume": 0.3
             },
-            "DepthOccludable": {},
+            "DepthOccludable": { "mode": "MinMaxSoftOcclusion" },
             "Pet": {
               "kind": "cat"
             },
