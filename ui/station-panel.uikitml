@@ -138,7 +138,7 @@
     <span class="text">Señala la bola roja con tu dedo índice</span>
   </div>
   <div id="tuto-dos" style="display: none; flex-direction: row; align-items: center; justify-content: center; gap: 18px; padding-top: 6px; padding-bottom: 6px">
-    <img id="st-mano1" src="./img/mano-agarre-izq.png" style="width: 72px; height: 96px"></img><img id="st-mano2" src="./img/mano-agarre-der.png" style="width: 72px; height: 96px"></img>
+    <img id="st-mano1" src="./img/mano-agarre-izq.png" style="width: 94px; height: 120px"></img><img id="st-mano2" src="./img/mano-agarre-der.png" style="width: 94px; height: 120px"></img>
     <span id="tuto-dos-t" class="text" style="max-width: 240px">Abre las dos manos y acércalas a Nube para sujetarla</span>
   </div>
   <div class="row">

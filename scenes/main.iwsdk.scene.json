@@ -71,7 +71,7 @@
               "rolloffFactor": 0.5
             },
             "DepthOccludable": {
-              "mode": "SoftOcclusion"
+              "mode": "HardOcclusion"
             },
             "Pet": {
               "kind": "cat"
