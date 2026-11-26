@@ -45,71 +45,6 @@
                   "height": 0.0016,
                   "opacity": 0.4,
                   "size": [
-                    1.1,
-                    1.3
-                  ]
-                }
-              },
-              "id": "dog-contact",
-              "name": "Sombra del perro",
-              "transform": {
-                "position": [
-                  0,
-                  0.002,
-                  0
-                ]
-              }
-            }
-          ],
-          "components": {
-            "AudioSource": {
-              "maxInstances": 2,
-              "playbackMode": "fade-restart",
-              "src": "./audio/ladrando.mp3",
-              "volume": 1,
-              "refDistance": 2.5,
-              "rolloffFactor": 0.5
-            },
-            "DepthOccludable": { "mode": "MinMaxSoftOcclusion" },
-            "Pet": {
-              "kind": "dog"
-            },
-            "RayInteractable": {},
-            "PokeInteractable": {}
-          },
-          "content": {
-            "asset": "dog",
-            "type": "asset"
-          },
-          "id": "dog",
-          "name": "Perro",
-          "transform": {
-            "position": [
-              -0.5,
-              0,
-              0
-            ],
-            "rotationDeg": [
-              0,
-              15,
-              0
-            ]
-          }
-        },
-        {
-          "children": [
-            {
-              "components": {
-                "ContactShadow": {
-                  "color": [
-                    0,
-                    0,
-                    0,
-                    1
-                  ],
-                  "height": 0.0016,
-                  "opacity": 0.4,
-                  "size": [
                     0.8,
                     0.9
                   ]
@@ -135,7 +70,9 @@
               "refDistance": 2.5,
               "rolloffFactor": 0.5
             },
-            "DepthOccludable": { "mode": "MinMaxSoftOcclusion" },
+            "DepthOccludable": {
+              "mode": "SoftOcclusion"
+            },
             "Pet": {
               "kind": "cat"
             },
@@ -226,6 +163,26 @@
       },
       "id": "kit-boton-panel",
       "name": "Boton ORDENAR EL KIT",
+      "transform": {
+        "position": [
+          0,
+          -10,
+          0
+        ],
+        "scale": 0.16
+      }
+    },
+    {
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "content": {
+        "asset": "rastreo-boton-panel",
+        "type": "asset"
+      },
+      "id": "rastreo-boton-panel",
+      "name": "Boton revisar equipo de rastreo",
       "transform": {
         "position": [
           0,

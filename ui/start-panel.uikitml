@@ -57,6 +57,7 @@
     color: #14305e;
     font-size: 28px;
     line-height: 34px;
+    text-align: center;
   }
 
   .warning {
@@ -94,7 +95,7 @@
   <div class="logo-box">
     <img class="logo" src="./ui/logo.png" />
   </div>
-  <span class="title">Cuida a tus mascotas</span>
+  <span class="title">¿Estás listo para proteger a tu gato?</span>
   <span id="start-unsupported" class="warning" style="display: none">Este dispositivo no es compatible con realidad aumentada. Abre este enlace en un Meta Quest.</span>
   <div id="start-button" class="btn">
     <Pointer width="24" height="24" color="#ffffff"></Pointer>

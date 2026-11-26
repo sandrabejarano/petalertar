@@ -108,6 +108,7 @@
       <PawPrint id="ico-paw" width="30" height="30" color="#ffffff" style="display: none"></PawPrint>
       <MapPin id="ico-pin" width="30" height="30" color="#ffffff" style="display: none"></MapPin>
       <Shield id="ico-shield" width="30" height="30" color="#ffffff" style="display: none"></Shield>
+      <SatelliteDish id="ico-antena" width="30" height="30" color="#ffffff" style="display: none"></SatelliteDish>
     </div>
     <span id="it-name" class="title">Agua potable</span>
   </div>

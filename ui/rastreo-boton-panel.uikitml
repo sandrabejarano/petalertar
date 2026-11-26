@@ -1,0 +1,65 @@
+<!--
+  Boton sobre tu gato (src/estaciones/rastreo.js): aparece al acercarte; al tocarlo se explica el microchip.
+    rastreo-revisar  boton REVISAR EQUIPO DE RASTREO. Iconos Lucide: Pointer, ArrowRight.
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-top: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 14px;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: #ffffff;
+    background-color: #dcebfb;
+    font-family: Barlow;
+  }
+
+  .num {
+    color: #ff7a66;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+
+  .btn {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 440px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 34px;
+    background-color: #ff7a66;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #ffc9bf;
+  }
+
+  .btn-label {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+  }
+</style>
+<div class="card">
+  <span class="num">RASTREO DE TU GATO</span>
+  <div id="rastreo-revisar" class="btn">
+    <Pointer width="24" height="24" color="#ffffff"></Pointer>
+    <span class="btn-label">revisar equipo de rastreo</span>
+    <ArrowRight width="26" height="26" color="#ffffff"></ArrowRight>
+  </div>
+</div>

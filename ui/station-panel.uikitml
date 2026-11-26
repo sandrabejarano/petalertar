@@ -25,7 +25,7 @@
 
   .card {
     flex-direction: column;
-    width: 520px;
+    width: 640px;
     padding-top: 24px;
     padding-left: 28px;
     padding-right: 28px;
@@ -118,27 +118,31 @@
     font-weight: bold;
   }
 </style>
-<div class="card">
+<div id="st-card" class="card">
   <span id="st-step" class="num">ESTACIÓN 1 DE 1</span>
   <span id="st-title" class="title">Kit de emergencia</span>
   <span id="st-text" class="text">Toca un objeto para ver para qué sirve.</span>
   <div id="tuto-mano" style="display: none; flex-direction: row; align-items: center; justify-content: center; gap: 14px; padding-top: 6px; padding-bottom: 6px">
     <div id="tuto-abierta" style="display: flex; flex-direction: column; align-items: center; gap: 4px">
-      <img id="tuto-img1" src="../img/mano-abierta.png" style="width: 66px; height: 84px"></img>
-      <span id="tuto-t1" class="text">Abre la mano</span>
+      <img id="tuto-img1" src="./img/mano-abierta.png" style="width: 66px; height: 84px"></img>
+      <span id="tuto-t1" class="text">Abre la palma</span>
     </div>
     <ArrowRight width="26" height="26" color="#ff7a66"></ArrowRight>
-    <div id="tuto-cerrada" style="display: flex; flex-direction: column; align-items: center; gap: 4px">
-      <img id="tuto-img2" src="../img/mano-puno.png" style="width: 64px; height: 84px"></img>
-      <span id="tuto-t2" class="text">Ciérrala para agarrar</span>
+    <div id="tuto-cerrada" style="display: flex; flex-direction: column; align-items: center; gap: 4px; max-width: 220px">
+      <img id="tuto-img2" src="./img/mano-puno.png" style="width: 64px; height: 84px"></img>
+      <span id="tuto-t2" class="text" style="text-align: center">Cierra la mano para sujetarlo</span>
     </div>
+  </div>
+  <div id="tuto-dedo" style="display: none; flex-direction: row; align-items: center; justify-content: center; gap: 16px; padding-top: 6px; padding-bottom: 6px">
+    <img id="tuto-img3" src="./img/mano-indice.png" style="width: 70px; height: 100px"></img>
+    <span class="text">Señala la bola roja con tu dedo índice</span>
   </div>
   <div id="tuto-dos" style="display: none; flex-direction: row; align-items: center; justify-content: center; gap: 18px; padding-top: 6px; padding-bottom: 6px">
     <Hand width="46" height="46" color="#14305e"></Hand>
     <Hand width="46" height="46" color="#14305e"></Hand>
     <ArrowDown width="30" height="30" color="#ff7a66"></ArrowDown>
     <PawPrint width="46" height="46" color="#ff7a66"></PawPrint>
-    <span class="text">Agáchate y agárrala con las dos manos</span>
+    <span id="tuto-dos-t" class="text">Agáchate y agárrala con las dos manos</span>
   </div>
   <div class="row">
     <div id="btn-move" class="round">
@@ -146,7 +150,7 @@
     </div>
     <div id="btn-skip" class="btn ghost" style="display: none">
       <Pointer width="22" height="22" color="#14305e"></Pointer>
-      <span class="ghost-label">Saltar</span>
+      <span id="btn-skip-label" class="ghost-label">Saltar</span>
     </div>
     <div id="btn-next" class="btn">
       <Pointer width="24" height="24" color="#ffffff"></Pointer>
