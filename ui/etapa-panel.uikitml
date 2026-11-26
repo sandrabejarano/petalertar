@@ -138,7 +138,7 @@
   <div class="head"><span id="et-kick" class="num">ETAPA 2 · RASTREO</span><div id="move-etapa" class="round"><Move width="22" height="22" color="#14305e"></Move></div></div>
   <span id="et-title" class="title">¿Y si se pierde?</span>
   <span id="et-text" class="text">Esto ayuda a encontrarla si escapa:</span>
-  <div id="et-tuto" style="display: none; flex-direction: row; align-items: center; justify-content: center; gap: 22px; padding-top: 4px; padding-bottom: 4px"><img src="./img/mano-agarre-izq.png" style="width: 72px; height: 96px"></img><img src="./img/mano-agarre-der.png" style="width: 72px; height: 96px"></img></div>
+  <div id="et-tuto" style="display: none; flex-direction: row; align-items: center; justify-content: center; gap: 22px; padding-top: 4px; padding-bottom: 4px"><img id="et-mano1" src="./img/mano-agarre-izq.png" style="width: 72px; height: 96px"></img><img id="et-mano2" src="./img/mano-agarre-der.png" style="width: 72px; height: 96px"></img></div>
   <div id="et-hint" class="item" style="display: none"><Eye width="26" height="26" color="#ff7a66"></Eye><span class="item-text">Mira a tu alrededor para buscar a tu gato.</span></div>
   <div id="et-list" class="list">
     <div class="item"><div class="dot"></div><span id="et-b1" class="item-text">Microchip: te identifica como dueño.</span></div>

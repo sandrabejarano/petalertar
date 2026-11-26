@@ -253,6 +253,10 @@
       }
     },
     {
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
       "content": {
         "asset": "item-panel",
         "type": "asset"
