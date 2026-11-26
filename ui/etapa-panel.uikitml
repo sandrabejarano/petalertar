@@ -139,6 +139,7 @@
   <span id="et-title" class="title">¿Y si se pierde?</span>
   <span id="et-text" class="text">Esto ayuda a encontrarla si escapa:</span>
   <div id="et-tuto" style="display: none; flex-direction: row; align-items: center; justify-content: center; gap: 22px; padding-top: 4px; padding-bottom: 4px"><img id="et-mano1" src="./img/mano-agarre-izq.png" style="width: 118px; height: 150px"></img><img id="et-mano2" src="./img/mano-agarre-der.png" style="width: 118px; height: 150px"></img></div>
+  <div id="et-dedo" style="display: none; flex-direction: row; justify-content: center; padding-top: 6px; padding-bottom: 2px"><img id="et-dedo-img" src="./img/mano-dedo.png" style="width: 96px; height: 113px"></img></div>
   <div id="et-hint" class="item" style="display: none"><Eye width="26" height="26" color="#ff7a66"></Eye><span class="item-text">Mira a tu alrededor para buscar a tu gato.</span></div>
   <div id="et-list" class="list">
     <div class="item"><div class="dot"></div><span id="et-b1" class="item-text">Microchip: te identifica como dueño.</span></div>

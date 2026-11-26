@@ -70,9 +70,6 @@
               "refDistance": 2.5,
               "rolloffFactor": 0.5
             },
-            "DepthOccludable": {
-              "mode": "HardOcclusion"
-            },
             "Pet": {
               "kind": "cat"
             },
