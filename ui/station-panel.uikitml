@@ -138,8 +138,7 @@
     <span class="text">Señala la bola roja con tu dedo índice</span>
   </div>
   <div id="tuto-dos" style="display: none; flex-direction: row; align-items: center; justify-content: center; gap: 18px; padding-top: 6px; padding-bottom: 6px">
-    <Hand width="46" height="46" color="#14305e"></Hand>
-    <Hand width="46" height="46" color="#14305e"></Hand>
+    <img src="./img/mano-agarre-izq.png" style="width: 72px; height: 96px"></img><img src="./img/mano-agarre-der.png" style="width: 72px; height: 96px"></img>
     <ArrowDown width="30" height="30" color="#ff7a66"></ArrowDown>
     <PawPrint width="46" height="46" color="#ff7a66"></PawPrint>
     <span id="tuto-dos-t" class="text">Agáchate y agárrala con las dos manos</span>
